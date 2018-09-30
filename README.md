@@ -3,7 +3,7 @@
 
 #### 1. translate 翻译单词小工具
 
-**只能翻译一个单词**
+*只能翻译一个单词*
 ```javascript
 see hello
 // get the hello is: [ '你好' ]
@@ -11,7 +11,7 @@ see hello
 
 #### 2. gitignore 一键生成.gitignore文件
 
-**直接运行命令**
+*直接运行命令*
 ```javascript
 gitignore
 // .gitignore文件已生成！
