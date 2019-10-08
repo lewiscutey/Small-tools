@@ -8,7 +8,7 @@ const superagent = require('superagent') // http请求
 program
   .allowUnknownOption()
   .version('0.0.1')
-  .usage('translate <cmd> [input]')
+  .usage('<cmd> [input]')
 
 // 有道api
 const API = 'http://fanyi.youdao.com/openapi.do?keyfrom=toaijf&key=868480929&type=data&doctype=json&version=1.1'
@@ -16,7 +16,7 @@ const API = 'http://fanyi.youdao.com/openapi.do?keyfrom=toaijf&key=868480929&typ
 // 添加自定义命令
 program
   .command('query')
-  .description('翻译输入')
+  .description('查询输入的翻译')
   .action(function (word) {
     // 发起请求
     superagent.get(API)
@@ -50,7 +50,7 @@ program
 // 没有参数时显示帮助信息
 if (!process.argv[2]) {
   program.help();
-  console.log();
+  console.log('请输入类似： 【translate query 苹果】查询');
 }
 
 program.parse(process.argv)
